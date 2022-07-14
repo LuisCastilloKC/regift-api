@@ -15,4 +15,9 @@ class GiftsController < ApplicationController
         end
     end
 
+    def show
+        gift = Gift.find(params[:id])
+        render json: gift
+    end
+
 end
