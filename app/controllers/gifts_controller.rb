@@ -28,6 +28,11 @@ class GiftsController < ApplicationController
         end
     end
 
+    def destroy
+        gift = Gift.find(params[:id])
+        gift.destroy
+    end
+
     private
 
     def gift_params
