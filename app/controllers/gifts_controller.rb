@@ -1,8 +1,8 @@
 class GiftsController < ApplicationController
 
     def index
-        gift = Gift.all
-        render json: gift
+        gifts = Gift.all
+        render json: gifts
     end
 
     def create
