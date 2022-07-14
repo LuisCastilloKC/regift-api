@@ -28,4 +28,10 @@ class GiftsController < ApplicationController
         end
     end
 
+    private
+
+    def gift_params
+        params.require(:gift).permit(:name, :user_id)
+    end
+
 end
