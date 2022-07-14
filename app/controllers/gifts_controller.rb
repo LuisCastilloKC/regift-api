@@ -20,4 +20,12 @@ class GiftsController < ApplicationController
         render json: gift
     end
 
+    def update
+        if gift.update(gift_params)
+            render json: gift
+        else
+            render json: gift.errors, status: :unprocessable_entity 
+        end
+    end
+
 end
